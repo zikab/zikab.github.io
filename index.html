@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="icon" href="heart.png">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <style>
+        *{
+          margin: 0;
+          padding: 0;
+          font-family: fontThin;
+        }
+        @font-face {
+          font-family: fontThin;
+          src: url(cooper-hewitt/CooperHewitt-Thin.otf);
+        }
+        @font-face {
+          font-family: fontMeduim;
+          src: url(cooper-hewitt/CooperHewitt-Medium.otf);
+        }
+        @font-face {
+          font-family: fontHeavy;
+          src: url(cooper-hewitt/CooperHewitt-Semibold.otf);
+        }
+        h1{
+          font-family: fontMeduim;
+        }
+        img{
+          filter: grayscale(100%);
+          object-fit: contain;
+        }
+        img:hover{
+          filter: grayscale(0%);
+        }
+        button{
+          margin-left: 30%; 
+          margin-right: 30%; 
+          padding-top: 2%; 
+          padding-bottom: 2%; 
+          margin-top: 10%; 
+          background-color: white; 
+          border: 1pt solid grey;
+          font-size: 12pt;
+        }
+        button:hover{
+          background-color: grey; 
+          color: white;
+        }
+        #name{
+          font-size: 55pt;
+        }
+        .infoP{
+          text-align: right;
+        }
+        #socialmediaIcons{
+          margin-top: 10pt; 
+          text-align: right;
+        }
+        .rightPicProject{
+          display: grid; 
+          grid-template-columns: 0.4fr 0.6fr; 
+          margin-top: 5%;
+        }
+        .leftPicProject{
+          display: grid; 
+          grid-template-columns: 0.6fr 0.4fr; 
+          margin-top: 5%;
+        }
+        #textAboutMe{
+          display: grid; 
+          position: absolute; 
+          top:30%; 
+          margin-left: 50%;
+        }
+        /*phone*/
+        @media only screen and (max-width: 1010px) {
+          #info{
+            display: grid;
+            align-content: center;
+          }
+          .infoP{
+            text-align: center;
+          }
+          #socialmediaIcons{
+            text-align: center;
+          }
+          #name{
+            text-align: center;
+          }
+        }
+        @media only screen and (max-width: 690px) {
+          #photograph{
+            opacity: 0.5;
+          }
+          #textAboutMe{
+            margin-right: 3%;
+            margin-left: 30%;
+          }
+          h1{
+            font-size: 18pt;
+          }
+        }
+      </style>
+  </head>
+  <body>
+    <div>
+      <div id="aboutMe" style="display: grid; grid-template-columns: 1fr 1fr;">
+        <img id="photograph" src="photograph.jpg" style="width: 400pt; " data-aos="fade-right" data-aos-duration="2000">
+        <div id="textAboutMe" data-aos="fade-in" data-aos-duration="2000">
+          <h1 id="name">Zainah Bokhari</h1>
+          <div id="info">
+            <p class="infoP">A creative, motivated, front-end developer.</p>
+            <p class="infoP">Skills: Java - python - HTML - JS - CSS.</p>
+            <div id="socialmediaIcons">
+              <img id="iconLinkedin" src="linkedin.png" style="filter: invert(0%) sepia(2%) saturate(0%) hue-rotate(239deg) brightness(100%) contrast(100%); ">
+              <img id="iconGithub" src="github.png" style="filter: invert(0%) sepia(2%) saturate(0%) hue-rotate(239deg) brightness(100%) contrast(100%);">
+              <img id="iconGmail" src="gmail.png" style="filter: invert(0%) sepia(2%) saturate(0%) hue-rotate(239deg) brightness(100%) contrast(100%);">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="projects">
+        <div class="rightPicProject">
+          <div style="display: grid; align-content: center;">
+            <h1 style="padding-left: 20%; padding-right: 20%;">Developed a website for a medical center</h1>
+            <p style="text-align: left; padding-left: 20%; padding-right: 20%; padding-top: 10%;">front-end and back-end development.</p>
+            <button id="project1demo">click to watch demo</button>
+            <button id="project1code" style="margin-top: 2%;">click to see source code</button>
+          </div>
+          <img src="project1.png" style="width: 100%; height: 400pt; " data-aos="fade-left" data-aos-duration="2000">
+        </div>
+
+        <div class="leftPicProject">
+          <img id="project2" src="project2.png" style="width: 100%; height: 400pt;" data-aos="fade-right" data-aos-duration="2000">
+          <div style="display: grid; align-content: center;">
+            <h1 style="padding-left: 20%; padding-right: 20%;">Designed a portfolio website for a personal trainer</h1>
+            <p style="text-align: left; padding-left: 20%; padding-right: 20%; padding-top: 10%;">freelancing a portfolio front-end design.</p>
+            <button id="project2demo">click to watch demo</button>
+            <button id="project2code" style="margin-top: 2%;">click to see source code</button>
+          </div>
+        </div>
+
+        <div class="rightPicProject">
+          <div style="display: grid; align-content: center;">
+            <h1 style="padding-left: 20%; padding-right: 20%;">Flappy bird</h1>
+            <p style="text-align: left; padding-left: 20%; padding-right: 20%; padding-top: 10%;">made using Unity with C#, for learning purposes only.</p>
+            <!-- <button id="project3demo">click to watch demo</button> -->
+            <button id="project3code" style="margin-top: 5%;">click to see source code</button>
+          </div>
+          <img src="flappybird.gif" style="width: 100%; height: 400pt;" data-aos="fade-left" data-aos-duration="2000">
+        </div>
+
+        <div class="leftPicProject">
+          <img id="project2" src="project3.gif" style="width: 100%; height: 400pt;" data-aos="fade-right" data-aos-duration="2000">
+          <div style="display: grid; align-content: center;">
+            <h1 style="padding-left: 20%; padding-right: 20%;">Memory Game</h1>
+            <p style="text-align: left; padding-left: 20%; padding-right: 20%; padding-top: 10%;">developed using HTML, JS, CSS.</p>
+            <!-- <button id="project4demo">click to watch demo</button> -->
+            <button id="project4code" style="margin-top: 5%;">click to see source code</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <p style="text-align: center; font-size: 9pt;">@ copyright 2020 zikab</p>
+    <p style="text-align: center; font-size: 9pt;">all rights reserved.</p>
+   </body>
+</html>
+<script>
+  AOS.init();
+</script>
+<script type="text/javascript">
+  (function(){
+    $(document).ready(function(){
+      //icon on click
+      $('#iconLinkedin').click(function(){
+        window.open("https://sa.linkedin.com/in/zainah-bokhari");
+      });
+      $('#iconGithub').click(function(){
+        window.open("https://github.com/zikab");
+      });
+      $('#iconGmail').click(function(){
+        window.location.href = "mailto:zikab.pro@gmail.com?"; 
+      });
+      //demo/code buttons
+      $('#project1demo').click(function(){
+        window.open("https://www.youtube.com/watch?v=hJM_dDXjUjM&feature=youtu.be");
+      });
+      $('#project1code').click(function(){
+        window.open("https://www.youtube.com/watch?v=hJM_dDXjUjM&feature=youtu.be");
+      });
+      $('#project2demo').click(function(){
+        window.open("https://www.youtube.com/watch?v=-P2PS034OCw");
+      });
+      $('#project2code').click(function(){
+        window.open("https://github.com/zikab/PersonalTrainerPortfolio");
+      });
+      $('#project3code').click(function(){
+        window.open("https://github.com/zikab/FlappyBird");
+      });
+      $('#project4code').click(function(){
+        window.open("https://github.com/zikab/memoryCardGame");
+      });
+    });
+  }());
+</script>

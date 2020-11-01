@@ -73,6 +73,13 @@
           top:30%; 
           margin-left: 50%;
         }
+        #photograph{
+          width: 100%;
+        }
+        .projectInfo{
+          display: grid; 
+          align-content: center;
+        }
         /*phone*/
         @media only screen and (max-width: 1010px) {
           #info{
@@ -91,7 +98,23 @@
           #textAboutMe{
             top:20%; 
           }
+          #photograph{
+            width: 600pt;
+          }
+          .projectInfo{
+            order: 1;
+          }
+          .rightPicProject{
+          grid-template-columns: 0.6fr 0.4fr; 
+          }
+          #projects{
+            background-color: #bfbfbf;
+            margin-top: 20%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+          }
         }
+        
         @media only screen and (max-width: 690px) {
           #photograph{
             opacity: 0.5;
@@ -104,12 +127,16 @@
             font-size: 18pt;
           }
         }
+        @media only screen and (max-width: 680px) and (max-height: 850px) {
+          #photograph{
+            opacity: 0;
+          }
       </style>
   </head>
   <body>
     <div>
       <div id="aboutMe" style="display: grid; grid-template-columns: 1fr 1fr;">
-        <img id="photograph" src="photograph.jpg" style="width: 400pt; " data-aos="fade-right" data-aos-duration="2000">
+        <img id="photograph" src="photograph.jpg" data-aos="fade-right" data-aos-duration="2000">
         <div id="textAboutMe" data-aos="fade-in" data-aos-duration="2000">
           <h1 id="name">Zainah Bokhari</h1>
           <div id="info">
@@ -125,18 +152,18 @@
       </div>
       <div id="projects">
         <div class="rightPicProject">
-          <div style="display: grid; align-content: center;">
+          <div class="projectInfo">
             <h1 style="padding-left: 20%; padding-right: 20%;">Developed a website for a medical center</h1>
             <p style="text-align: left; padding-left: 20%; padding-right: 20%; padding-top: 10%;">front-end and back-end development.</p>
             <button id="project1demo">click to watch demo</button>
             <button id="project1code" style="margin-top: 2%;">click to see source code</button>
           </div>
-          <img src="project1.png" style="width: 100%; height: 400pt; " data-aos="fade-left" data-aos-duration="2000">
+          <img src="project1.png" style="width: 100%; height: 400pt; " data-aos="fade-up" data-aos-duration="2000">
         </div>
 
         <div class="leftPicProject">
-          <img id="project2" src="project2.png" style="width: 100%; height: 400pt;" data-aos="fade-right" data-aos-duration="2000">
-          <div style="display: grid; align-content: center;">
+          <img id="project2" src="project2.png" style="width: 100%; height: 400pt;" data-aos="fade-up" data-aos-duration="2000">
+          <div class="projectInfo">
             <h1 style="padding-left: 20%; padding-right: 20%;">Designed a portfolio website for a personal trainer</h1>
             <p style="text-align: left; padding-left: 20%; padding-right: 20%; padding-top: 10%;">freelancing a portfolio front-end design.</p>
             <button id="project2demo">click to watch demo</button>
@@ -145,18 +172,18 @@
         </div>
 
         <div class="rightPicProject">
-          <div style="display: grid; align-content: center;">
+          <div class="projectInfo">
             <h1 style="padding-left: 20%; padding-right: 20%;">Flappy bird</h1>
             <p style="text-align: left; padding-left: 20%; padding-right: 20%; padding-top: 10%;">made using Unity with C#, for learning purposes only.</p>
             <!-- <button id="project3demo">click to watch demo</button> -->
             <button id="project3code" style="margin-top: 5%;">click to see source code</button>
           </div>
-          <img src="flappybird.gif" style="width: 100%; height: 400pt;" data-aos="fade-left" data-aos-duration="2000">
+          <img src="flappybird.gif" style="width: 100%; height: 400pt;" data-aos="fade-up" data-aos-duration="2000">
         </div>
 
         <div class="leftPicProject">
-          <img id="project2" src="project3.gif" style="width: 100%; height: 400pt;" data-aos="fade-right" data-aos-duration="2000">
-          <div style="display: grid; align-content: center;">
+          <img id="project2" src="project3.gif" style="width: 100%; height: 400pt;" data-aos="fade-up" data-aos-duration="2000">
+          <div class="projectInfo">
             <h1 style="padding-left: 20%; padding-right: 20%;">Memory Game</h1>
             <p style="text-align: left; padding-left: 20%; padding-right: 20%; padding-top: 10%;">developed using HTML, JS, CSS.</p>
             <!-- <button id="project4demo">click to watch demo</button> -->
@@ -171,7 +198,7 @@
    </body>
 </html>
 <script>
-  AOS.init();
+  AOS.init({disable: 'mobile'});
 </script>
 <script type="text/javascript">
   (function(){
